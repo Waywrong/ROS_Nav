@@ -67,11 +67,11 @@ int main( int argc, char** argv )
     marker.pose.orientation.y = 0.0;
     marker.pose.orientation.z = 0.0;
     marker.pose.orientation.w = 1.0;
-    std::string strOut;
-  strOut = "(" + to_string(_robotPose.x) + " " 
-	      + to_string(_robotPose.y) + " "
-	      + to_string(_robotPose.theta) + ")";
-  ROS_INFO_STREAM(strOut);
+//     std::string strOut;
+//     strOut = "(" + to_string(_robotPose.x) + " " 
+// 		+ to_string(_robotPose.y) + " "
+// 		+ to_string(_robotPose.theta) + ")";
+//     ROS_INFO_STREAM(strOut); 
 	      
     // Set the scale of the marker -- 1x1x1 here means 1m on a side
     marker.scale.x = .3;
