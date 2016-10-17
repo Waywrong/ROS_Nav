@@ -146,6 +146,9 @@ target_link_libraries(listener2 ${catkin_LIBRARIES})
 add_executable(basic_shapes src/basic_shapes.cpp)
 target_link_libraries(basic_shapes ${catkin_LIBRARIES})
 
+add_executable(pubVector3 src/pubVector3.cpp)
+target_link_libraries(pubVector3 ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
