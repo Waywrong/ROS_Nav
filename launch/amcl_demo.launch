@@ -14,13 +14,13 @@
   <arg name="initial_pose_x" default="0.0"/> <!-- Use 17.0 for willow's map in simulation -->
   <arg name="initial_pose_y" default="0.0"/> <!-- Use 17.0 for willow's map in simulation -->
   <arg name="initial_pose_a" default="0.0"/>
-  <include file="/home/peter/code/ros_indigo/src/ros_test/launch/amcl.launch.xml">
+  <include file="$(find ros_test1)/launch/includes/amcl.launch.xml">
     <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
     <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
     <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
   </include>
 
-  <include file="/home/peter/code/ros_indigo/src/ros_test/launch/move_base.launch.xml">
+  <include file="$(find ros_test1)/launch/includes/move_base.launch.xml">
     <!-- <arg name="custom_param_file" value="$(arg custom_param_file)"/> -->
   </include>
 
