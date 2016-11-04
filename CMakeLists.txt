@@ -8,6 +8,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   visualization_msgs
+  move_base_msgs 
+  actionlib
 )
 
 ## System dependencies are found with CMake's conventions
@@ -148,6 +150,10 @@ target_link_libraries(basic_shapes ${catkin_LIBRARIES})
 
 add_executable(pubVector3 src/pubVector3.cpp)
 target_link_libraries(pubVector3 ${catkin_LIBRARIES})
+
+add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
+target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
+
 
 #############
 ## Install ##
