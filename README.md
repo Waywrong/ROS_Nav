@@ -2,7 +2,14 @@
 
 ```
 #!txt
+====gmapping&move_base==================================================
+roslaunch mrpt_tutorials r1_gazebo_gh25.launch 
 
+roslaunch ros_test1 gmapping_demo.launch
+
+roslaunch ros_test1 view_navigation.launch
+
+roslaunch ros_test1 keyboard.launch 
 ====move_base==================================================
 roslaunch mrpt_tutorials r1_gazebo_gh25.launch
 

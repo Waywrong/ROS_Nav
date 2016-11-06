@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+<!--   <include file="$(find turtlebot_bringup)/launch/3dsensor.launch">
+    <arg name="rgb_processing" value="false" />
+    <arg name="depth_registration" value="false" />
+    <arg name="depth_processing" value="false" />
+    <arg name="scan_topic" value="/r1/front_laser/scan" />
+  </include> -->
+
+  <include file="$(find ros_test1)/launch/includes/real_gmapping.launch.xml"/>
+
+  <include file="$(find ros_test1)/launch/includes/real_move_base.launch.xml"/>
+  <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo"/>
+<!--   <node pkg="turtlebot_teleop" type="turtlebot_teleop_key" name="teleop_keyboard"  output="screen">
+    <param name="scale_linear" value="0.5" type="double"/>
+    <param name="scale_angular" value="1.5" type="double"/>
+    <remap from="teleop_keyboard/cmd_vel" to="diff_drive_controller/cmd_vel"/>
+  </node> -->
+  <node pkg="tf" type="static_transform_publisher" name="odom_2_base_link" args="0 0 0 0 0 0 /odom /base_link 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="hokuyo_2_laser_link" args="0 0 0 0 0 0 /hokuyo_link /laser 100"/>
+</launch>
