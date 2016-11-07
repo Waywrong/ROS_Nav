@@ -23,9 +23,11 @@
   <include file="$(find ros_test1)/launch/includes/real_move_base.launch.xml">
     <!-- <arg name="custom_param_file" value="$(arg custom_param_file)"/> -->
   </include>
-  <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo"/>
-  <node pkg="tf" type="static_transform_publisher" name="map_2_odom" args="0 0 0 0 0 0 /map /odom 100"/>
+  <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo">
+	<param name="frame_id" value="/hokuyo_link"/>
+  </node>
+  <!--node pkg="tf" type="static_transform_publisher" name="map_2_odom" args="0 0 0 0 0 0 /map /odom 100"/>
   <node pkg="tf" type="static_transform_publisher" name="odom_2_base_link" args="0 0 0 0 0 0 /odom /base_link 100"/>
-  <node pkg="tf" type="static_transform_publisher" name="hokuyo_2_laser_link" args="0 0 0 0 0 0 /hokuyo_link /laser 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="hokuyo_2_laser_link" args="0 0 0 0 0 0 /hokuyo_link /laser 100"/-->
 </launch>
 
